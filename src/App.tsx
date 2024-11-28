@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-white p-6 lg:p-10"> {/* Increased padding on large screens */}
       {/* Header */}
-      <header className="flex justify-between items-center w-full max-w-6xl p-6 lg:p-8 rounded-full bg-[#0c3125] text-white">
+      <header className="flex justify-between items-center w-full max-w-5xl p-6 lg:p-8 rounded-full bg-[#0c3125] text-white">
         <h1 className="text-2xl lg:text-3xl tracking-tight">
           <span>Sustain·</span><span className='font-semibold'>ability</span>
         </h1>
@@ -19,10 +19,10 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-6xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-5xl w-full">
         {/* Text Section */}
         <section className="flex flex-col items-center bg-[#e8f787] p-12 lg:p-16 rounded-3xl text-center md:text-left h-full">
-          <h2 className="text-5xl lg:text-6xl font-medium text-center text-[#142e1e] leading-tight">
+          <h2 className="text-5xl lg:text-4xl font-medium text-center text-[#142e1e] leading-tight">
             Building a Greener Tomorrow, Today
           </h2>
           <p className="text-lg lg:text-xl text-center text-[#142e1e] mt-6">
@@ -46,7 +46,7 @@ function App() {
 
       <Marquee />
 
-      <section className="relative w-full flex flex-col items-center text-center py-20 bg-white max-w-6xl">
+      <section className="relative w-full flex flex-col items-center text-center py-20 bg-white max-w-5xl">
         {/* Decorative Images */}
         <div className="absolute hidden md:block md:left-5 md:top-8 lg:left-0">
           <img
@@ -79,7 +79,7 @@ function App() {
 
 
         {/* Main Text */}
-        <h2 className="text-4xl lg:text-6xl font-medium text-[#142e1e] mb-6">
+        <h2 className="text-4xl lg:text-4xl font-medium text-[#142e1e] mb-6">
           Reimagining Urban Spaces &<br /> Designing Green Cities of the Future
         </h2>
         <p className="text-[#1b3425] text-xl font-medium max-w-3xl mb-10">
@@ -94,7 +94,7 @@ function App() {
         </button>
       </section>
 
-      <div className="grid grid-cols-2 lg:grid-cols-6 gap-8 md:w-3/4 lg:w-6xl mt-10">
+      <div className="grid grid-cols-2 lg:grid-cols-6 gap-8 md:w-3/4 lg:max-w-6xl mt-10">
         {/* Image Section */}
         <div className="col-span-2 lg:col-span-6">
           <img
@@ -150,9 +150,9 @@ function App() {
         </div>
 
         {/* Large Card Section */}
-        <div className="col-span-2 lg:col-span-3 bg-green-800 text-white p-12 rounded-3xl shadow-md bg-image2 lg:mr-32">
-          <h2 className="text-4xl 2xl:text-6xl font-medium mb-4 text-secondary">Nourishing People & the Planet</h2>
-          <p className="mb-4 font-semibold text-xl pr-5">
+        <div className="col-span-2 lg:col-span-3 bg-green-800 text-white p-12 rounded-3xl shadow-md bg-image2">
+          <h2 className="text-4xl 2xl:text-4xl font-medium mb-4 text-secondary">Nourishing People & the Planet</h2>
+          <p className="mb-4 text-2xl pr-5">
             Our vision is to lead the way in sustainable urban design, creating cities that are resilient, livable, and flourishing.
           </p>
           <button className="flex items-center gap-1 text-xl mt-6 px-6 py-4 border border-secondary text-secondary rounded-full hover:bg-secondary hover:text-primary transition">
@@ -178,7 +178,7 @@ function App() {
 
         <div className="col-span-2 lg:col-span-6 relative w-full flex flex-col items-center text-center py-16 bg-white">
           {/* Main Text */}
-          <h2 className="text-4xl lg:text-6xl font-medium text-primary mb-4">
+          <h2 className="text-4xl lg:text-4xl font-medium text-primary mb-4">
             Helping Cities & Communities<br /> Combat Climate Change
           </h2>
           <p className="text-primary text-2xl font-medium w-3/4 my-8">
@@ -195,7 +195,7 @@ function App() {
           <div className='border-2 border-primary text-primary text-2xl h-14 w-14 rounded-full flex items-center justify-center mb-10'>
             <QuoteIcon size={25} />
           </div>
-          <p className='text-4xl leading-snug'>
+          <p className='text-3xl leading-snug'>
             Working with Sustain·ability was a game-changer for our city. Their innovative solutions not only helped us combat climate change but also revitalized our urban landscape.
           </p>
           <p className='text-xl mt-4'>
@@ -212,7 +212,7 @@ function App() {
         </div>
 
         <div className="col-span-2 lg:col-span-6 bg-primary text-white p-20 lg:px-20 rounded-3xl font-medium text-center flex flex-col items-center">
-          <h2 className='text-5xl 2xl:text-6xl text-secondary font-semibold'>
+          <h2 className='text-5xl 2xl:text-5xl text-secondary font-semibold'>
             Ready to transform your city <br /> into a green paradise?
           </h2>
           <p className='text-2xl my-10 font-medium lg:w-4/5'>
