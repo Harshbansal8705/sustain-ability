@@ -8,15 +8,30 @@ import MayorEmilyGreene from './images/mayor-emily-greene.png';
 function App() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-white p-6 lg:p-10"> {/* Increased padding on large screens */}
+      <nav className="w-full max-w-5xl bg-[#0c3125] text-white rounded-full px-6">
+        <div className="max-w-5xl mx-auto flex items-center justify-between p-6 lg:p-8">
+          <h1 className="text-2xl lg:text-3xl tracking-tight">
+            <span>Sustain·</span><span className="font-semibold">ability</span>
+          </h1>
+          <ul className="flex gap-6 lg:gap-10 text-lg">
+            <li><a href="#home" className="hover:underline">Home</a></li>
+            <li><a href="#services" className="hover:underline">Services</a></li>
+            <li><a href="#portfolio" className="hover:underline">Portfolio</a></li>
+            <li><a href="#about-us" className="hover:underline">About Us</a></li>
+            <li><a href="#pricing-faqs" className="hover:underline">Pricing & FAQs</a></li>
+            <li><a href="#contact-us" className="hover:underline">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
       {/* Header */}
-      <header className="flex justify-between items-center w-full max-w-5xl p-6 lg:p-8 rounded-full bg-[#0c3125] text-white">
+      {/* <header className="flex justify-between items-center w-full max-w-5xl p-6 lg:p-8 rounded-full bg-[#0c3125] text-white">
         <h1 className="text-2xl lg:text-3xl tracking-tight">
           <span>Sustain·</span><span className='font-semibold'>ability</span>
         </h1>
         <button className="flex items-center gap-1 bg-transparent text-white border border-white px-6 py-3 rounded-full hover:bg-white hover:text-green-900 transition">
           Get Growing <ArrowUpRightIcon />
         </button>
-      </header>
+      </header> */}
 
       {/* Main Content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-5xl w-full">
