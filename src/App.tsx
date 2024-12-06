@@ -5,6 +5,10 @@ import Home from "./pages/Home";
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import PortfolioPage from './pages/Portfolio';
+import BIMServicesPage from './pages/BIMServicesPage';
+import MEPServicesPage from './pages/MEPDesignPage';
+import StructuralDesignServicesPage from './pages/StructuralDesignPage';
+import ThreeDVisualizationPage from './pages/ThreeDVisualisationPage';
 function App() {
   return (
     <>
@@ -15,6 +19,10 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/services/bim" element={<BIMServicesPage />} />
+        <Route path="/services/threeD-visualisation" element={<ThreeDVisualizationPage />} />
+        <Route path="/services/mep" element={<MEPServicesPage />} />
+        <Route path="/services/structure-design" element={<StructuralDesignServicesPage />} />
       </Routes>
     </Router>
     {/* Footer */}
