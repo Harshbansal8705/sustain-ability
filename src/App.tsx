@@ -9,10 +9,13 @@ import BIMServicesPage from './pages/BIMServicesPage';
 import MEPServicesPage from './pages/MEPDesignPage';
 import StructuralDesignServicesPage from './pages/StructuralDesignPage';
 import ThreeDVisualizationPage from './pages/ThreeDVisualisationPage';
+import Navbar from './pages/Navbar';
 function App() {
   return (
     <>
+    
     <Router>
+      <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />

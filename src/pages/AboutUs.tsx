@@ -1,113 +1,103 @@
-import React, { useState } from "react";
+// Import necessary dependencies
+import React, { useState, useEffect } from "react";
+import "../images/CoreValues.jpg"
+import "../images/vision.jpg"
+import "../images/mission.jpg"
+import "../images/philosophy.jpg"
 
-const AboutUs: React.FC = () => {
-  const [isMissionVisible, setMissionVisible] = useState(false);
+import HappyClientsCarousel from "./HappyClientCarousel";
+import FAQs from "./FAQs";
+// Tailwind-based component
+const AboutUs = () => {
+  const [typedText, setTypedText] = useState("");
+  const fullText = "Our People";
 
-  const toggleMission = () => setMissionVisible(!isMissionVisible);
+  useEffect(() => {
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      setTypedText((prev) => fullText.slice(0, index));
+      index++;
+      if (index > fullText.length) {
+        index = 0;
+      }
+    }, 400); // Typing speed (200ms per character)
+
+    return () => clearInterval(typingInterval);
+  }, []);
 
   return (
-    <div className="bg-white text-gray-800 py-16 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto">
-        {/* Page Title */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#0c3125] mb-8 text-center">
-          About Us
+    <div className="bg-gray-50 text-gray-800">
+      {/* Header Section */}
+      {/* <header className="py-10 px-5 text-center bg-gradient-to-r from-blue-500 to-blue-800 text-white">
+        <h1 className="text-5xl font-bold">Meet Our People</h1>
+      </header> */}
+
+      {/* Our People Section */}
+      <section className="py-16 px-5">
+        <h2 className="text-4xl font-bold text-center mb-10">
+          <span className="typing-animation"><span className="text-gray-600">MEET </span>{typedText}</span>            <span className="blinking-cursor">|</span>
         </h2>
-
-        {/* Introduction Section */}
-        <div className="text-center mb-12">
-          <p className="text-lg text-gray-600 leading-relaxed">
-            We are a team committed to driving sustainability and innovation.
-            Our journey began with a mission to empower communities, businesses,
-            and individuals to embrace eco-friendly solutions and shape a
-            brighter, greener future. Join us as we continue to make an impact!
-          </p>
-        </div>
-
-        {/* Mission and Vision Section */}
-        <div className="mb-12">
-          <button
-            onClick={toggleMission}
-            className="flex items-center justify-between w-full bg-[#0c3125] text-green-700 font-bold py-4 px-6 rounded-lg hover:bg-[#1A342B] transition"
-          >
-            <span className="text-[#e6f586]">Our Mission and Vision</span>
-            <svg
-              className={`w-6 h-6 transform ${
-                isMissionVisible ? "rotate-180" : "rotate-0"
-              } transition-transform`}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[1, 2, 3, 4].map((person, index) => (
+            <div
+              key={index}
+              className="relative group bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
+              <img
+                src={`/path/to/image${person}.jpg`}
+                alt="Person"
+                className="w-full h-56 object-cover"
               />
-            </svg>
-          </button>
-          {isMissionVisible && (
-            <div className="mt-4 bg-[#0c3125] border border-green-200 rounded-lg p-6 text-gray-700">
-              <h3 className="text-xl font-semibold text-[#e6f586] mb-2">
-                Our Mission
-              </h3>
-              <p className="text-white">
-                To inspire and enable sustainable practices worldwide, creating
-                harmony between technological advancements and the environment.
-              </p>
-              <h3 className="text-xl font-semibold text-[#e6f586] mt-4 mb-2">
-                Our Vision
-              </h3>
-              <p className="text-white">
-                To become a global leader in sustainability solutions, fostering
-                a legacy of eco-conscious innovation and collaboration.
-              </p>
-            </div>
-          )}
-        </div>
-
-        {/* Team Members Section */}
-        <div>
-          <h3 className="text-2xl font-bold text-[#0c3125] mb-6 text-center">
-            Meet Our Team
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Alice Johnson",
-                role: "CEO",
-                img: "https://via.placeholder.com/150",
-              },
-              {
-                name: "Michael Brown",
-                role: "CTO",
-                img: "https://via.placeholder.com/150",
-              },
-              {
-                name: "Emma Williams",
-                role: "COO",
-                img: "https://via.placeholder.com/150",
-              },
-            ].map((member, index) => (
-              <div
-                key={index}
-                className="text-center bg-[#0c3125] p-6 rounded-lg shadow-md hover:shadow-lg transition"
-              >
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto mb-4"
-                />
-                <h4 className="text-lg font-bold text-[#e6f586]">
-                  {member.name}
-                </h4>
-                <p className="text-white">{member.role}</p>
+              <div className="p-5">
+                <h3 className="text-lg font-semibold">Person Name</h3>
+                <p className="text-gray-500">Role/Title</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
+
+      {/* Know Us Section */}
+      <section className="py-16 px-5 bg-[#0c3125]">
+        <h2 className="text-4xl text-center mb-10 text-white">Know <span className="text-amber-300 font-bold ">About Us</span></h2>
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-10 items-center">
+          <div className="flex items-center">
+            
+            <p className="text-white text-center">
+            Sustain.ability is a multidisciplinary CAD studio. We collaborate with our clients to design, develop, and deliver work that we are proud of and that represents our passion for engineering. We have world-class development teams with deep domain expertise and project management skills that enable us to run a seamless, scalable, cost-effective offshoring model that turns complex business challenges into real business opportunities. We are more than just a service provider; We are a solutions provider for your SUCCESS.
+            </p>
+            
+          </div>
+          <div className="flex justify-evenly">
+          <img src="vision.jpg" alt="" />
+          <img src="mission.jpg" alt="" />
+          <img src="philosophy.jpg" alt="" />
+        </div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="py-16 px-5 bg-[#0c3125]">
+        <img src="CoreValues.jpg" alt="corvalues" />
+        <h2 className="text-4xl font-bold text-center mb-10">Core Values</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {[
+            { title: "Integrity", description: "We value honesty and trust." },
+            { title: "Innovation", description: "We strive for creativity." },
+            { title: "Excellence", description: "We pursue perfection." },
+          ].map((value, index) => (
+            <div
+              key={index}
+              className="bg-white p-5 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+              <p className="text-gray-600">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <HappyClientsCarousel></HappyClientsCarousel>
+      <FAQs></FAQs>
     </div>
   );
 };
