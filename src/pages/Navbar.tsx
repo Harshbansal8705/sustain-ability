@@ -1,67 +1,60 @@
-import React from 'react'
-import HeroImage from "../images/hero.png";
-import ArrowUpRightIcon from '../icons/ArrowUpRightIcon';
-import Marquee from '../components/Marquee';
-import QuoteIcon from '../icons/QuoteIcon';
-import MayorEmilyGreene from '../images/mayor-emily-greene.png';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <div>
-      <nav className="bg-[#0c3125] text-white py-4 shadow-lg rounded-full mx-4 my-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
+    <div className="bg-primary fixed top-0 left-0 w-full z-50 shadow-md">
+      <nav className="text-white py-4 shadow-lg">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8">
           {/* Logo */}
-          <div className="text-2xl font-bold tracking-wide mr-auto"> {/* Added `mr-auto` for spacing */}
-          <h1 className="text-2xl lg:text-3xl tracking-tight">
-            <span>Sustain·</span><span className="font-semibold">ability</span>
-          </h1>
+          <div className="text-2xl font-bold tracking-wide">
+            <h1 className="text-2xl lg:text-3xl tracking-tight">
+              <span>Sustain·</span><span className="font-semibold">ability</span>
+            </h1>
           </div>
 
           {/* Menu for larger screens */}
-          <div className="hidden md:flex space-x-8 text-lg ml-8"> {/* Added `ml-8` for spacing */}
+          <div className="hidden md:flex space-x-6 text-lg font-playfair">
             <Link
               to="/"
-              className="hover:text-green-400 transition duration-300 ease-in-out"
+              className="hover:text-gray-400 transition duration-300 ease-in-out"
             >
               Home
             </Link>
             <Link
               to="/services"
-              className="hover:text-green-400 transition duration-300 ease-in-out"
+              className="hover:text-gray-400 transition duration-300 ease-in-out"
             >
               Services
             </Link>
             <Link
               to="/portfolio"
-              className="hover:text-green-400 transition duration-300 ease-in-out"
+              className="hover:text-gray-400 transition duration-300 ease-in-out"
             >
               Portfolio
             </Link>
             <Link
               to="/about-us"
-              className="hover:text-green-400 transition duration-300 ease-in-out"
+              className="hover:text-gray-400 transition duration-300 ease-in-out"
             >
               About Us
             </Link>
             <Link
               to="/contact-us"
-              className="hover:text-green-400 transition duration-300 ease-in-out"
+              className="hover:text-gray-400 transition duration-300 ease-in-out"
             >
               Contact Us
             </Link>
           </div>
 
           {/* Hamburger Menu for smaller screens */}
-          <div className="md:hidden ml-auto"> {/* Added `ml-auto` for spacing */}
+          <div className="md:hidden">
             <button
               type="button"
               className="text-white hover:text-green-400 focus:outline-none transition duration-300"
-              onClick={() => {
-                const menu = document.getElementById("mobile-menu");
-                if (menu) {
-                  menu.classList.toggle("hidden");
-                }
-              }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,44 +75,73 @@ function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div
-          id="mobile-menu"
-          className="hidden md:hidden flex flex-col items-center space-y-4 mt-4 bg-green-800 py-4 text-lg rounded-lg shadow-md mx-4"
-        >
-          <Link
-            to="/"
-            className="hover:text-green-400 transition duration-300 ease-in-out"
+        {isMobileMenuOpen && (
+          <div
+            className="fixed inset-0 bg-gradient-to-br from-baseGreen via-primary to-green-800 text-white flex flex-col items-center justify-center z-50 transition-transform duration-500"
           >
-            Home
-          </Link>
-          <Link
-            to="/services"
-            className="hover:text-green-400 transition duration-300 ease-in-out"
-          >
-            Services
-          </Link>
-          <Link
-            to="/portfolio"
-            className="hover:text-green-400 transition duration-300 ease-in-out"
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="/about-us"
-            className="hover:text-green-400 transition duration-300 ease-in-out"
-          >
-            About Us
-          </Link>
-          <Link
-            to="/contact-us"
-            className="hover:text-green-400 transition duration-300 ease-in-out"
-          >
-            Contact Us
-          </Link>
-        </div>
+            <button
+              type="button"
+              className="absolute top-5 right-5 text-white hover:text-green-400 focus:outline-none transition duration-300"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <div className="flex flex-col items-center space-y-6 font-playfair text-lg">
+              <Link
+                to="/"
+                className="hover:text-green-400 transition duration-300 ease-in-out text-2xl"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/services"
+                className="hover:text-green-400 transition duration-300 ease-in-out text-2xl"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                to="/portfolio"
+                className="hover:text-green-400 transition duration-300 ease-in-out text-2xl"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Portfolio
+              </Link>
+              <Link
+                to="/about-us"
+                className="hover:text-green-400 transition duration-300 ease-in-out text-2xl"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/contact-us"
+                className="hover:text-green-400 transition duration-300 ease-in-out text-2xl"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
     </div>
-  )
+  );
 }
 
 export default Navbar;

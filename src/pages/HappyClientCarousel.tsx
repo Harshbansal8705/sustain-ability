@@ -13,6 +13,8 @@ const clients: Client[] = [
   { name: 'Jane Smith', experience: 'I had a great experience working with this team, highly recommend!' },
   { name: 'Sam Wilson', experience: 'Professional and dedicated, they exceeded all my expectations.' },
   { name: 'Sarah Lee', experience: 'Exceptional service! My expectations were not only met but surpassed.' },
+  { name: 'Michael Brown', experience: 'A fantastic experience from start to finish. Highly skilled team!' },
+  { name: 'Emily Davis', experience: 'They transformed my ideas into reality. Truly impressive work!' },
 ];
 
 const HappyClientsCarousel: React.FC = () => {
@@ -22,10 +24,10 @@ const HappyClientsCarousel: React.FC = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000, // Auto move after 2 seconds
+    autoplaySpeed: 3000, // Auto move after 3 seconds
     ref: sliderRef,
   };
 
@@ -36,14 +38,14 @@ const HappyClientsCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full py-8">
-      <h2 className="text-center text-3xl font-bold mb-4">Happy Clients</h2>
+    <div className="w-full py-12 bg-gray-200"> {/* Changed to light gray background */}
+      <h2 className="text-center text-4xl font-bold text-gray-800 mb-8">Happy Clients</h2>
       <Slider {...settings}>
         {clients.map((client, index) => (
-          <div key={index} className="flex justify-center px-4 py-8 bg-gray-100 rounded-lg shadow-md">
-            <div className="text-center">
-              <p className="text-xl font-semibold">{client.name}</p>
-              <p className="text-gray-600 mt-2">{client.experience}</p>
+          <div key={index} className="flex justify-center px-4 py-8">
+            <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
+              <p className="text-xl font-semibold text-gray-800">{client.name}</p>
+              <p className="text-gray-600 mt-2 italic">"{client.experience}"</p>
             </div>
           </div>
         ))}

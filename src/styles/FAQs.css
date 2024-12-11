@@ -1,0 +1,26 @@
+.faq-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .faq-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .faq-question {
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-arrow {
+    transition: transform 0.3s;
+  }
+  
+  .faq-answer {
+    padding: 0 16px;
+  }

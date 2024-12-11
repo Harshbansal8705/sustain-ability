@@ -1,64 +1,64 @@
 import React, { useState } from 'react';
-import "../images/FAQ.jpg"
-interface FAQ {
-  question: string;
-  answer: string;
+import { FaPlus, FaMinus } from 'react-icons/fa'; // Import icons for expand/collapse
+
+interface FAQItem {
+    question: string;
+    answer: string;
 }
 
-const faqs: FAQ[] = [
-  { question: 'What is our company about?', answer: 'We are a leading tech company focused on innovative solutions.' },
-  { question: 'How do I contact support?', answer: 'You can contact support through our email or live chat on the website.' },
-  { question: 'Do we offer international shipping?', answer: 'Yes, we offer worldwide shipping to most countries.' },
-  { question: 'What payment methods do you accept?', answer: 'We accept credit cards, PayPal, and bank transfers.' },
-  { question: 'What payment methods do you accept?', answer: 'We accept credit cards, PayPal, and bank transfers.' },
-  { question: 'What payment methods do you accept?', answer: 'We accept credit cards, PayPal, and bank transfers.' },
-  { question: 'What payment methods do you accept?', answer: 'We accept credit cards, PayPal, and bank transfers.' },
-  { question: 'What payment methods do you accept?', answer: 'We accept credit cards, PayPal, and bank transfers.' },
-  
+const faqs: FAQItem[] = [
+  { question: "What is your return policy?", answer: "Our return policy allows you to return items within 30 days of purchase." },
+  { question: "How long does shipping take?", answer: "Shipping typically takes 5-7 business days." },
+  { question: "Can I change my order?", answer: "Yes, you can change your order within 24 hours of placing it." },
+  { question: "Do you offer international shipping?", answer: "Yes, we offer international shipping to select countries." },
+  { question: "What payment methods do you accept?", answer: "We accept all major credit cards, PayPal, and Apple Pay." },
+  { question: "How can I track my order?", answer: "Once your order has shipped, you will receive a tracking number via email." },
+  { question: "What should I do if I receive a damaged item?", answer: "If you receive a damaged item, please contact our customer service within 48 hours for assistance." },
 ];
-
 const FAQs: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const handleToggle = (index: number) => {
-    if (openIndex === index) {
-      setOpenIndex(null);
-    } else {
-      setOpenIndex(index);
-    }
-  };
+    const toggleAnswer = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
-  return (
-    <div className="w-full py-16 px-4">
-      <div className="flex flex-col lg:flex-row justify-between items-center">
-        <div className="w-full lg:w-1/2">
-          <h2 className="text-center text-3xl font-bold mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-300">
-                <div
-                  onClick={() => handleToggle(index)}
-                  className="cursor-pointer text-lg font-semibold text-left py-4 transition-all duration-300 ease-in-out"
-                >
-                  {faq.question}
+    const filteredFAQs = faqs.filter(faq =>
+        faq.question.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    return (
+        <div className="bg-white shadow-lg rounded-lg p-8 max-w-2xl mx-auto mt-10">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-gray-700 mb-6">Find answers to common questions below.</p>
+            <input
+                type="text"
+                className="w-full p-4 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-200"
+                placeholder="Search FAQs..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            
+            {filteredFAQs.map((faq, index) => (
+                <div key={index} className="mb-4">
+                    <div
+                        className="flex justify-between items-center bg-gray-100 p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-200 transition duration-200"
+                        onClick={() => toggleAnswer(index)}
+                    >
+                        <span className="font-semibold text-gray-800 text-lg">{faq.question}</span>
+                        <span className="text-lg text-gray-600">
+                            {openIndex === index ? <FaMinus /> : <FaPlus />}
+                        </span>
+                    </div>
+                    {openIndex === index && (
+                        <div className="bg-gray-50 p-4 border border-gray-300 rounded-lg mt-2 transition-all duration-300 ease-in-out">
+                            <p className="text-gray-700">{faq.answer}</p>
+                        </div>
+                    )}
                 </div>
-                <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out max-h-0 ${
-                    openIndex === index ? 'max-h-screen py-4' : ''
-                  }`}
-                >
-                  <p className="text-gray-600">{faq.answer}</p>
-                </div>
-              </div>
             ))}
-          </div>
         </div>
-        <div className="hidden lg:block w-full lg:w-1/2 mt-8 lg:mt-0">
-          <img src="FAQ.jpg" alt="FAQ Illustration" className="w-full h-auto rounded-lg shadow-lg" />
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default FAQs;
