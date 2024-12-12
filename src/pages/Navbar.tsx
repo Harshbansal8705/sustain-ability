@@ -11,7 +11,7 @@ function Navbar() {
           {/* Logo */}
           <div className="text-2xl font-bold tracking-wide">
             <h1 className="text-2xl lg:text-3xl tracking-tight">
-              <span>Sustain·</span><span className="font-semibold">ability</span>
+              <span>Sustain·</span><span className="font-semibold text-textHighlight">ability</span>
             </h1>
           </div>
 
