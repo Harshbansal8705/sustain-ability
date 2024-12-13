@@ -5,13 +5,14 @@ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-primary fixed top-0 left-0 w-full z-50 shadow-md">
-      <nav className="text-white py-4 shadow-lg">
+    <div className="bg-primary fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] lg:w-4/5 z-50 shadow-xl rounded-full">
+      <nav className="text-white py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8">
           {/* Logo */}
           <div className="text-2xl font-bold tracking-wide">
             <h1 className="text-2xl lg:text-3xl tracking-tight">
-              <span>Sustain·</span><span className="font-semibold text-textHighlight">ability</span>
+              <span>Sustain·</span>
+              <span className="font-semibold text-textHighlight">ability</span>
             </h1>
           </div>
 
@@ -77,7 +78,7 @@ function Navbar() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-0 bg-gradient-to-br from-baseGreen via-primary to-green-800 text-white flex flex-col items-center justify-center z-50 transition-transform duration-500"
+            className="fixed inset-0 bg-gradient-to-br from-baseGreen via-primary to-green-800 text-white flex flex-col items-center justify-center z-50 transition-transform duration-500 rounded-full"
           >
             <button
               type="button"
