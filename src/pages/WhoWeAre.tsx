@@ -4,7 +4,7 @@ interface Props { }
 
 const WhoWeAre: React.FC<Props> = () => {
     return (
-        <div className="container mx-auto py-12 px-12">
+        <div className="container mx-auto py-12 lg:px-12 md:px-12 px-6">
 
             <div className='flex flex-col md:flex-row'>
 

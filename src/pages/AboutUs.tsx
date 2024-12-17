@@ -31,7 +31,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 text-gray-800 overflow-hidden my-20">
+    <div className="bg-gray-50 text-gray-800 overflow-hidden my-16">
       <WhoWeAre></WhoWeAre>
       <TextComponent></TextComponent>
       <CultureCard></CultureCard>

@@ -51,7 +51,7 @@ const services = [
 
 const ServicesPage: React.FC = () => {
   return (
-    <div id="container" className="min-h-screen font-sans text-base md:text-lg">
+    <div id="container" className="min-h-screen font-sans text-base md:text-lg my-10">
       <header id="header" className="py-6 px-4 md:px-12">
         <div
           id="main-title"

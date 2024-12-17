@@ -5,7 +5,7 @@ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] lg:w-4/5 z-50 w-full z-50 bg-primary shadow-lg rounded-full">
+    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] lg:w-4/5 z-50 md:w-6/12 z-50 bg-primary shadow-lg rounded-full">
       <nav className="text-white py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8">
           {/* Logo */}

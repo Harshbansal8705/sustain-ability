@@ -5,11 +5,11 @@ const Marquee = () => {
     <div className="marquee-container">
       <div className="marquee">
         <span>
-          Nature design • Smart irrigation systems • Rooftop Farming • Renewable energy • Eco-friendly materials • Vertical gardens
+        Structure design •  MEP design • BIM services • 3D visualisation
         </span>
         {/* Repeat the text to create a continuous scroll effect */}
         <span>
-          Nature design • Smart irrigation systems • Rooftop Farming • Renewable energy • Eco-friendly materials • Vertical gardens
+        Structure design •  MEP design • BIM services • 3D visualisation
         </span>
       </div>
     </div>
