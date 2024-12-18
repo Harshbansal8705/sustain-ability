@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs: React.FC = () => {
   return (
-    <div className="bg-white text-gray-800 py-16 px-6 md:px-16">
+    <div className="bg-white text-gray-800 py-16 px-6 md:px-16 my-16">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#0c3125] mb-8 text-center">

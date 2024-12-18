@@ -5,61 +5,67 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 const services = [
   {
     id: "first",
-    title: "BMI",
-    subtitle: "Drawing & Drafting",
+    title: "BIM",
+    subtitle: "Revolutionizing Construction with Data-Driven Modeling",
     description:
-      "The BIM revolution has transformed the construction industry. When we refer to BIM Modeling Services and REVIT BIM Services, we're talking about the ability of the supply chain to digitally exchange data. Modern BIM technology extends beyond just 3D modeling, incorporating augmented BIM models or BIM dimensions that enable the calculation of the 4th dimension (time), the 5th dimension (cost), and the 6th dimension (project life-cycle or facilities management information).",
+      "BIM isn’t just a tool—it’s the future of collaboration and precision. We empower your projects with intelligent modeling that transforms planning, execution, and management.​<br><br><strong>What we deliver:</strong><br><ul style='list-style:disc; padding-left:20px'><li >Comprehensive 3D/4D/5D modeling tailored to your project.</li><li>Clash detection for streamlined workflows and zero on-site surprises.</li><li>Data-rich models to enable smarter decision-making and lifecycle management.</li></ul>",
     bgColor: "bg-gradient-to-r from-[#0c3125] to-[#144d3c]",
     textColor: "text-[#e6f586]",
     icon: "fas fa-project-diagram",
     route: "/services/bim",
+    button: "See BIM in Action",
   },
   {
     id: "second",
     title: "3D Visualisation",
-    subtitle: "Realistic Renderings & Virtual Walkthroughs",
+    subtitle: "Immersive Visuals That Speak Your Vision",
     description:
-      "3D Visualization has revolutionized the way we conceptualize and present design ideas. It allows for the creation of highly detailed and realistic visual representations of architectural and engineering projects before construction begins. Through advanced rendering techniques and virtual walkthroughs, 3D visualization provides clients with a clear, immersive understanding of a project, enhancing decision-making and communication. This technology goes beyond static images, enabling dynamic views that showcase various design alternatives and help anticipate project outcomes in a visually compelling way.",
+      "Step into the future with breathtaking 3D renderings and interactive walkthroughs that bring ideas to life. We help you visualize every detail, leaving no room for guesswork.<br><br><strong>What we deliver:</strong><br><ul style='list-style:disc; padding-left:20px'><li >High-definition, photorealistic visuals for pitches, approvals, and marketing.</li><li>Interactive virtual walkthroughs for immersive client experiences./li><li>Multi-option simulations to evaluate design possibilities in real-time.</li></ul>",
     bgColor: "bg-gradient-to-l from-[#0c3125] to-[#144d3c]",
     textColor: "text-white",
     icon: "fas fa-cube",
     route: "/services/threeD-visualisation",
+    button: "View Our Visuals",
   },
   {
     id: "third",
     title: "Structure Design",
     subtitle: "Innovative Engineering for Safe & Efficient Buildings",
     description:
-      "Structure Design is the foundation of any building project, ensuring safety, stability, and functionality. It involves the planning and creation of structural systems that support the building's load while adapting to its specific requirements and environment. Advanced engineering techniques and technology are used to design materials and frameworks that can withstand external forces such as wind, earthquakes, and weight. The goal of structural design is to create cost-effective, durable, and resilient structures that meet regulatory standards and are efficient throughout their life-cycle.",
+      "We craft intelligent, future-proof structural designs that prioritize safety, efficiency, and adaptability. Our expertise ensures every project stands resilient against the challenges of time, environment, and load dynamics.<br><br><strong>What We Deliver:</strong><br><ul style='list-style-type:disc; padding-left:20px;'><li>Innovative structural frameworks designed for seismic and wind resilience.</li><li>Optimization of materials to balance cost-effectiveness with durability.</li><li>Tailored designs for complex architectural visions and high-performance buildings.</li></ul>",
+
     bgColor: "bg-gradient-to-r from-[#0c3125] to-[#144d3c]",
     textColor: "text-[#e6f586]",
     icon: "fas fa-archway",
     route: "/services/structure-design",
-  },
+    button: "Explore our Approach",
+  }
+  ,
   {
     id: "fourth",
     title: "MEP Design",
-    subtitle: "Integrated Solutions for Mechanical, Electrical, and Plumbing Systems",
+    subtitle: "Precision-Driven Systems for Seamless Functionality",
     description:
-      "MEP Design focuses on the efficient integration of mechanical, electrical, and plumbing systems within a building. This discipline ensures that all systems work harmoniously to provide comfort, safety, and energy efficiency. From heating, ventilation, and air conditioning (HVAC) to electrical wiring and plumbing infrastructure, MEP design optimizes the flow of utilities and services while minimizing energy consumption and operational costs. By considering factors like sustainability, regulatory compliance, and future scalability, MEP design plays a crucial role in enhancing the functionality and performance of any building",
+      "Our MEP solutions go beyond integration—they redefine efficiency, sustainability, and performance. From concept to execution, we ensure every system is designed to work in perfect harmony.<br><br><strong>What we deliver:</strong><br><ul style='list-style-type:disc; padding-left:20px;'><li>Intelligent electrical layouts for reliability and scalability.</li><li>Energy-efficient HVAC systems optimized for performance and comfort.</li><li>Sustainable plumbing designs with water management solutions.</li></ul>",
     bgColor: "bg-gradient-to-l from-[#0c3125] to-[#144d3c]",
     textColor: "text-white",
     icon: "fas fa-lightbulb",
     route: "/services/mep",
+    button: "Discover Our Expertise",
   },
 ];
 
 const ServicesPage: React.FC = () => {
   return (
     <div id="container" className="min-h-screen font-sans text-base md:text-lg my-10">
-      <header id="header" className="py-6 px-4 md:px-12">
+      <header id="header" className="py-6 px-4 md:px-12 my-16">
         <div
           id="main-title"
           className="text-2xl md:text-4xl font-bold flex flex-col md:flex-row justify-between items-start md:items-center"
         >
           <h2>
             Our Services
-          
+
           </h2>
         </div>
       </header>
@@ -68,11 +74,10 @@ const ServicesPage: React.FC = () => {
           <div
             key={service.id}
             id={service.id}
-            className={`flex flex-col md:flex-row items-center ${
-              index % 2 === 0
+            className={`flex flex-col md:flex-row items-center ${index % 2 === 0
                 ? "md:flex-row rounded-l-full md:ml-6"
                 : "md:flex-row-reverse rounded-r-full md:mr-6"
-            } ${service.bgColor} p-6 md:p-8`}
+              } ${service.bgColor} p-6 md:p-8`}
           >
             {/* Title Section */}
             <div
@@ -83,24 +88,26 @@ const ServicesPage: React.FC = () => {
 
             {/* Info Section */}
             <div
-              className={`info flex-1 mx-4 md:mx-8 p-4 ${
-                index % 2 === 0 ? "md:border-l" : "md:border-r"
-              } border-white ${service.textColor}`}
+              className={`info flex-1 mx-4 md:mx-8 p-4 ${index % 2 === 0 ? "md:border-l" : "md:border-r"
+                } border-white ${service.textColor}`}
             >
               <div className="text-xl md:text-2xl font-bold">{service.title}</div>
               <div className="text-sm md:text-lg font-light mt-1">{service.subtitle}</div>
-              <p className="mt-2 md:mt-4 text-sm md:text-base">{service.description}</p>
+              <p
+                className="mt-2 md:mt-4 text-sm md:text-base"
+                dangerouslySetInnerHTML={{ __html: service.description }}
+              ></p>
+
               {/* Know More Button */}
               <div className="mt-4 flex justify-start md:justify-start">
                 <Link
                   to={service.route}
-                  className={`inline-block px-4 py-2 mt-2 font-medium text-sm md:text-base rounded-lg ${
-                    index % 2 === 0
+                  className={`inline-block px-4 py-2 mt-2 font-medium text-sm md:text-base rounded-lg ${index % 2 === 0
                       ? "bg-[#e6f586] text-[#0c3125]"
                       : "bg-white text-[#0c3125]"
-                  } hover:shadow-lg`}
+                    } hover:shadow-lg`}
                 >
-                  Know More
+                  {service.button}
                 </Link>
               </div>
             </div>

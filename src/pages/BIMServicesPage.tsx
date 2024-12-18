@@ -2,7 +2,7 @@ import React from "react";
 
 const BIMServicesPage: React.FC = () => {
   return (
-    <div className="font-sans">
+    <div className="font-sans my-24">
       {/* Header Section */}
       <header className="bg-baseGreen text-textHighlight p-8 flex items-center justify-between">
         <div className="flex items-center space-x-4">
@@ -14,46 +14,64 @@ const BIMServicesPage: React.FC = () => {
           <h1 className="text-4xl font-bold">BIM Services</h1>
         </div>
         {/* Tagline */}
-        <p className="text-lg font-semibold">The FUTURE is BIM Shaped</p>
+        <p className="text-lg font-semibold">Shaping the Future of Construction with BIM</p>
       </header>
 
       {/* Content Section */}
       <main className="bg-textHighlight text-baseGreen p-10">
         <section className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">The FUTURE is BIM Shaped</h2>
+          {/* <h2 className="text-3xl font-bold mb-6">Comprehensive Structural BIM Services</h2> */}
           <p className="text-lg leading-relaxed mb-6">
-            The BIM revolution has taken hold in the construction industry. When
-            we talk about BIM Modelling Services & REVIT BIM Services, we're
-            referring to the supply chain's capacity to digitally exchange data.
-            Today's BIM technology goes beyond 3D modeling and includes
-            augmented BIM models or BIM dimensions that allow for the
-            computation of the 4th dimension of time, the 5th dimension of cost,
-            and the 6th dimension of Project life-cycle information or
-            facilities management.
+            Building Information Modeling (BIM) has transformed how projects are planned and executed. At AssistArchitect, we deliver intelligent, collaborative BIM solutions that minimize risks and maximize efficiency.
+          </p>
+          {/* <p className="text-lg leading-relaxed mb-6">
+            Our Structural BIM services focus on creating highly detailed 3D models of structural components such as beams, columns, foundations, and slabs. These models not only assist in analyzing structural performance but also enable the identification of potential design conflicts, ensuring optimization for safety, functionality, and efficiency.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            BIM Modelling services are becoming more popular as a new way to
-            manage projects. BIM facilitates collaboration among stakeholders,
-            resulting in increased profitability, lower costs, better time
-            management, and improved client relationships. BIM not only makes
-            it easier for design and development teams to function more
-            effectively, but it also makes it possible for them to use the data
-            they produce during the project to benefit from operational and
-            maintenance activities.
+            The BIM models developed by our skilled engineers are designed to help calculate material requirements and resource planning, ensuring accurate cost estimation and effective time management throughout the project lifecycle.
           </p>
-          <p className="text-lg leading-relaxed">
-            Are you looking for BIM services that are effective, efficient, and
-            reasonably priced? Indovance enables clients to take advantage of
-            modern drafting and design practices and tools while meeting
-            project and budget constraints when outsourcing BIM projects. With
-            ISO-certified processes, quality assurance, cutting-edge
-            technologies, and skilled teams, we deliver results that meet your
-            requirements.
+          <p className="text-lg leading-relaxed mb-6">
+            With a team of experienced civil and structural engineers, BIM modelers, and draftsmen, we adhere to the highest building standards and local codes to deliver reliable structural models. Our proficiency ensures that every project meets both safety and performance benchmarks.
           </p>
+          <p className="text-lg leading-relaxed mb-6">
+            Structural BIM modeling fosters seamless coordination between architectural, MEP (Mechanical, Electrical, and Plumbing), and other disciplines, enhancing the overall workflow and reducing clashes during construction.
+          </p> */}
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Expertise</h3>
+          <ul className="list-disc ml-6 text-lg leading-relaxed">
+            <li><strong>3D Modeling:</strong>  Detailed visual representation of architectural, structural, and MEP elements.
+            </li>
+            <li><strong>4D (Time) & 5D (Cost) BIM: </strong> Project timelines and cost estimates integrated into models.</li>
+            <li><strong>Clash Detection:</strong> Identify and resolve design conflicts before construction begins.</li>
+            <li><strong>Facility Management BIM: </strong> Post-construction models for lifecycle management and maintenance.</li>
+
+          </ul>
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Process</h3>
+          <ul className="list-disc ml-6 text-lg leading-relaxed">
+            <li><strong>Model Creation:</strong> Develop data-rich 3D models using platforms like Revit and Navisworks.
+            </li>
+            <li><strong>Coordination:</strong> Integrate structural, MEP, and architectural elements for a unified approach.</li>
+            <li><strong>Simulations:</strong> Perform construction sequence analysis and cost forecasting.</li>
+            <li><strong>Handover:</strong>  Deliver comprehensive BIM files for construction and facility management.</li>
+
+          </ul>
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Why Choose Us?</h3>
+          <ul className="list-disc ml-6 text-lg leading-relaxed">
+            <li>Expertise in global BIM standards (LOD, COBie).</li>
+            <li>End-to-end support, from pre-construction to handover.</li>
+            <li>Reduce project delays and cost overruns with precise modeling.</li>
+
+
+          </ul>
+          <button
+            onClick={() => { window.open("/contact-us", "_blank"); }}
+            className="bg-black hover:bg-secondary hover:text-primary transition text-white mt-10 py-3 px-6 rounded-full shadow-md text-sm md:text-base font-medium"
+          >
+            Request a Free BIM Consultation
+          </button>
         </section>
       </main>
 
-      
+
     </div>
   );
 };

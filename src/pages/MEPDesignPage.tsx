@@ -2,7 +2,7 @@ import React from "react";
 
 const MEPServicesPage: React.FC = () => {
   return (
-    <div className="font-sans">
+    <div className="font-sans my-24">
       {/* Header Section */}
       <header className="bg-baseGreen text-textHighlight p-8 flex items-center justify-between">
         <div className="flex items-center space-x-4">
@@ -14,7 +14,7 @@ const MEPServicesPage: React.FC = () => {
           <h1 className="text-4xl font-bold">MEP Design Services</h1>
         </div>
         {/* Tagline */}
-        <p className="text-lg font-semibold">Shaping Efficient, Sustainable Solutions</p>
+        <p className="text-lg font-semibold">Redefining Building Systems for Efficiency & Sustainability</p>
       </header>
 
       {/* Content Section */}
@@ -22,30 +22,44 @@ const MEPServicesPage: React.FC = () => {
         <section className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">Comprehensive MEP Design Solutions</h2>
           <p className="text-lg leading-relaxed mb-6">
-            Sustainability offers a comprehensive range of MEP BIM services tailored to various building projects, including educational institutions, healthcare facilities, commercial buildings, residential complexes, public infrastructure, and industrial facilities. Our services are aligned with the highest standards and meet all necessary building codes and regulations.
+            In modern buildings, the synergy of mechanical, electrical, and plumbing systems defines functionality. Our MEP designs integrate innovation and practicality to deliver seamless experiences.
           </p>
-          <p className="text-lg leading-relaxed mb-6">
+          {/* <p className="text-lg leading-relaxed mb-6">
             We specialize in MEP BIM modeling and drafting, ensuring accurate detailing for every aspect of the MEP systems. Our team of expert engineers and draftspersons are equipped to develop high-quality MEP BIM models for any building type. We provide support for the entire lifecycle of your project, including coordination, system optimization, fabrication, and installation.
           </p>
           <p className="text-lg leading-relaxed mb-6">
             At Sustainability, we focus on delivering well-coordinated models and drawings that integrate architectural, structural, and MEP designs. Using industry-leading software such as Autodesk Revit and Navisworks, we ensure a seamless workflow throughout the design and construction process.
-          </p>
-          <h3 className="text-2xl font-semibold mt-6 mb-4">Our MEP BIM Modeling Services Include:</h3>
+          </p> */}
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Expertise</h3>
           <ul className="list-disc ml-6 text-lg leading-relaxed">
-            <li>HVAC/MEP Layout Modeling</li>
-            <li>Mechanical Ductwork and Duct Fittings Modeling</li>
-            <li>Mechanical Equipment Modeling and Equipment Schedules</li>
-            <li>Diffusers, Grills, and Vents Modeling</li>
-            <li>Electrical Lighting Fixtures, Cable Tray, and Conduit Modeling</li>
-            <li>Plumbing Layout Modeling and Sanitary Fixtures</li>
-            <li>3D Modeling and Rendering for MEP Systems</li>
-            <li>Walk-Throughs of MEP Models for Visualization</li>
-            <li>Fabrication Drawings for MEP Components</li>
-            <li>Bill of Quantities and Material Takeoffs</li>
+            <li><strong>HVAC Systems:</strong> Design and optimization of heating, ventilation, and air conditioning systems for energy efficiency.</li>
+            <li><strong>Electrical Engineering:</strong> Load balancing, wiring layouts, and backup systems that prioritize reliability.</li>
+            <li><strong>Plumbing Systems:</strong>Sustainable water management, piping design, and waste disposal solutions.</li>
+            <li><strong>Fire Safety Systems:</strong>Advanced smoke extraction, sprinkler layouts, and alarm systems compliant with NFPA standards.</li>
+
           </ul>
-          <p className="text-lg leading-relaxed mt-6">
-            Our goal is to streamline the construction process through accurate, coordinated, and fully integrated MEP BIM services. Whether you're in the early design phase or preparing for installation, Sutainability's MEP services ensure optimal performance, cost efficiency, and long-term sustainability for your building projects.
-          </p>
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Process</h3>
+          <ul className="list-disc ml-6 text-lg leading-relaxed">
+            <li><strong>Initial Assessment:</strong>Evaluate project requirements, building type, and environmental considerations.</li>
+            <li><strong>System Design: </strong>Develop detailed schematics for HVAC, electrical, and plumbing systems.</li>
+            <li><strong>Integration & Coordination: </strong>Collaborate with architects and structural engineers to ensure seamless implementation.</li>
+            <li><strong>Performance Testing:</strong> Conduct simulations to validate energy efficiency and compliance.</li>
+
+          </ul>
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Why Choose Us?</h3>
+          <ul className="list-disc ml-6 text-lg leading-relaxed">
+            <li>Proven expertise in creating sustainable, cost-effective MEP systems.</li>
+            <li>Integration of smart technologies for building automation.</li>
+            <li>Focus on long-term operational efficiency and maintenance ease.</li>
+
+
+          </ul>
+          <button
+            onClick={() => { window.open("/contact-us", "_blank"); }}
+            className="bg-black hover:bg-secondary hover:text-primary transition text-white mt-10 py-3 px-6 rounded-full shadow-md text-sm md:text-base font-medium"
+          >
+            Let’s Optimize Your Building Systems
+          </button>
         </section>
       </main>
     </div>

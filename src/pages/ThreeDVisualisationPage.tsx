@@ -2,7 +2,7 @@ import React from "react";
 
 const ThreeDVisualizationPage: React.FC = () => {
   return (
-    <div className="font-sans">
+    <div className="font-sans my-24">
       {/* Header Section */}
       <header className="bg-baseGreen text-textHighlight p-8 flex items-center justify-between">
         <div className="flex items-center space-x-4">
@@ -14,54 +14,57 @@ const ThreeDVisualizationPage: React.FC = () => {
           <h1 className="text-4xl font-bold">3D Visualization Services</h1>
         </div>
         {/* Tagline */}
-        <p className="text-lg font-semibold">Bringing Your Designs to Life in 3D</p>
+        <p className="text-lg font-semibold">Turning Ideas Into Reality with Stunning Visuals</p>
       </header>
 
       {/* Content Section */}
       <main className="bg-textHighlight text-baseGreen p-10">
         <section className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">Transform Your Concepts into Realistic Visuals</h2>
+          {/* <h2 className="text-3xl font-bold mb-6">Comprehensive Structural BIM Services</h2> */}
           <p className="text-lg leading-relaxed mb-6">
-            At Sustainability, we provide top-tier 3D architectural visualization services, encompassing 3D rendering, animations, and interactive walk-throughs. Whether you're working on residential, commercial, or institutional projects, our high-quality 3D models help bring your designs to life before construction even begins. Our realistic 3D renderings and animations are instrumental in helping you communicate your vision to clients, stakeholders, and potential investors.
+          In a world where visuals matter, our 3D visualization services bring your designs to life, allowing stakeholders to experience projects before they’re built.
+          </p>
+          {/* <p className="text-lg leading-relaxed mb-6">
+            Our Structural BIM services focus on creating highly detailed 3D models of structural components such as beams, columns, foundations, and slabs. These models not only assist in analyzing structural performance but also enable the identification of potential design conflicts, ensuring optimization for safety, functionality, and efficiency.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            We aim to deliver unmatched value to architects, realtors, and developers by offering fast turnaround times, competitive pricing, and visuals that enhance your marketing efforts. Leverage our high-quality 3D visuals across social platforms like Instagram, Facebook, and YouTube to showcase your properties in the best possible light.
+            The BIM models developed by our skilled engineers are designed to help calculate material requirements and resource planning, ensuring accurate cost estimation and effective time management throughout the project lifecycle.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            Beyond architecture, our 3D rendering services are also perfect for creating product models. Manufacturers can use these high-fidelity renderings for marketing, design, and product development, giving a realistic preview before production.
+            With a team of experienced civil and structural engineers, BIM modelers, and draftsmen, we adhere to the highest building standards and local codes to deliver reliable structural models. Our proficiency ensures that every project meets both safety and performance benchmarks.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            Our 3D visualization services are also integrated with CAD drawings, ensuring that your designs are presented in precise, detailed formats that are crucial for the construction industry. CAD drawings provide a comprehensive, accurate representation of building layouts, materials, and dimensions.
-          </p>
-          <h3 className="text-2xl font-semibold mt-6 mb-4">Our 3D Rendering and Animation Services Include:</h3>
+            Structural BIM modeling fosters seamless coordination between architectural, MEP (Mechanical, Electrical, and Plumbing), and other disciplines, enhancing the overall workflow and reducing clashes during construction.
+          </p> */}
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Expertise</h3>
           <ul className="list-disc ml-6 text-lg leading-relaxed">
-            <li>High-quality 3D architectural rendering with light and shadow analysis</li>
-            <li>Photo-realistic 3D interior and exterior renderings</li>
-            <li>Interactive walkthroughs and flythrough animations for buildings</li>
-            <li>Renderings for Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR)</li>
-            <li>3D walkthroughs of architectural sites</li>
-            <li>Rendering of 3D floor plans for residential, commercial, and industrial buildings</li>
-            <li>Furniture rendering of CAD models with realistic textures</li>
-            <li>High-quality 3D product renderings for design and marketing communication</li>
+            <li><strong>Photorealistic Rendering:</strong>   High-definition visuals that capture every detail of your project.</li>
+            <li><strong>Virtual Walkthroughs:  </strong>Interactive experiences for real estate pitches and client presentations.</li>
+            <li><strong>Material Simulations:</strong>Visualize different finishes, textures, and materials to make informed design choices.</li>
+            <li><strong>360° Panoramas:  </strong> Immersive environments for a complete spatial experience.</li>
+
           </ul>
-          <h3 className="text-2xl font-semibold mt-6 mb-4">We Provide 3D Renderings & Animations for Various Building Types:</h3>
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Process</h3>
           <ul className="list-disc ml-6 text-lg leading-relaxed">
-            <li>Residential and Commercial Buildings</li>
-            <li>Industrial Structures</li>
-            <li>High and Low-rise Buildings</li>
-            <li>Educational Institutions</li>
-            <li>Parking Garages</li>
-            <li>Restaurants and Hotels</li>
+            <li><strong>Project Understanding:</strong>Collect plans, elevations, and design briefs.
+            </li>
+            <li><strong>Model Creation: </strong>Develop a digital 3D model with accurate dimensions and textures.</li>
+            <li><strong>Rendering & Animation:</strong> Apply realistic lighting, shadows, and material properties.</li>
+            <li><strong>Client Review:</strong>  Refine visuals based on feedback for final delivery.</li>
+
           </ul>
-          <p className="text-lg leading-relaxed mt-6">
-            Step into the future with breathtaking 3D renderings and interactive walkthroughs that bring ideas to life. We help you visualize every detail, leaving no room for guesswork.
-            What We Deliver:
-            <ul>
-              <li>High-definition, photorealistic visuals for pitches, approvals, and marketing.</li>
-              <li>Interactive virtual walkthroughs for immersive client experiences.</li>
-              <li>Multi-option simulations to evaluate design possibilities in real-time.</li>
-            </ul>
-          </p>
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Why Choose Us?</h3>
+          <ul className="list-disc ml-6 text-lg leading-relaxed">
+            <li>State-of-the-art rendering tools like V-Ray, Lumion, and Unreal Engine.</li>
+            <li>Quick turnaround times to meet tight deadlines.</li>
+            <li>Visual storytelling that drives engagement and decision-making.</li>
+          </ul>
+          <button
+            onClick={() => { window.open("/contact-us", "_blank"); }}
+            className="bg-black hover:bg-secondary hover:text-primary transition text-white mt-10 py-3 px-6 rounded-full shadow-md text-sm md:text-base font-medium"
+          >
+            Experience the Power of 3D Visualization
+          </button>
         </section>
       </main>
     </div>

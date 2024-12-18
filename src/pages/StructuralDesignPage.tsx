@@ -2,7 +2,7 @@ import React from "react";
 
 const StructuralDesignServicesPage: React.FC = () => {
   return (
-    <div className="font-sans">
+    <div className="font-sans my-24">
       {/* Header Section */}
       <header className="bg-baseGreen text-textHighlight p-8 flex items-center justify-between">
         <div className="flex items-center space-x-4">
@@ -14,17 +14,17 @@ const StructuralDesignServicesPage: React.FC = () => {
           <h1 className="text-4xl font-bold">Structure Design Services</h1>
         </div>
         {/* Tagline */}
-        <p className="text-lg font-semibold">Designing Resilient Structures for the Future</p>
+        <p className="text-lg font-semibold">Reimagining Engineering for Resilient Structures</p>
       </header>
 
       {/* Content Section */}
       <main className="bg-textHighlight text-baseGreen p-10">
         <section className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">Comprehensive Structural BIM Services</h2>
+          {/* <h2 className="text-3xl font-bold mb-6">Comprehensive Structural BIM Services</h2> */}
           <p className="text-lg leading-relaxed mb-6">
-            We specialize in providing advanced Structural BIM services for both concrete and steel structures across a wide range of projects, including residential, commercial, and industrial buildings. Whether you're starting from schematic designs (SD) or hand-drawn sketches, we transform them into precise BIM models during the design development phase, leading to comprehensive construction documentation (CD sets).
+            Every great building starts with a rock-solid foundation. At AssistArchitect, we don’t just design structures; we craft intelligent frameworks that balance aesthetics, functionality, and safety.
           </p>
-          <p className="text-lg leading-relaxed mb-6">
+          {/* <p className="text-lg leading-relaxed mb-6">
             Our Structural BIM services focus on creating highly detailed 3D models of structural components such as beams, columns, foundations, and slabs. These models not only assist in analyzing structural performance but also enable the identification of potential design conflicts, ensuring optimization for safety, functionality, and efficiency.
           </p>
           <p className="text-lg leading-relaxed mb-6">
@@ -35,24 +35,37 @@ const StructuralDesignServicesPage: React.FC = () => {
           </p>
           <p className="text-lg leading-relaxed mb-6">
             Structural BIM modeling fosters seamless coordination between architectural, MEP (Mechanical, Electrical, and Plumbing), and other disciplines, enhancing the overall workflow and reducing clashes during construction.
-          </p>
-          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Structural BIM Services Include:</h3>
+          </p> */}
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Expertise</h3>
           <ul className="list-disc ml-6 text-lg leading-relaxed">
-            <li>Comprehensive Structural BIM Modeling</li>
-            <li>Precast Modeling and Detailing</li>
-            <li>Detailed Steel Structure Modeling</li>
-            <li>Rebar Detailing and Placement Modeling</li>
-            <li>Integration and Coordination with Architectural and MEP Models</li>
-            <li>Development of Structural Shop Drawings</li>
-            <li>Complete Construction Documentation</li>
-            <li>Creation of Parametric Families for Structural Elements</li>
-            <li>As-Built Structural Modeling</li>
-            <li>Point Cloud Data Integration into Structural BIM Models</li>
-            <li>Accurate Bill of Quantities (BOQ) Preparation</li>
+            <li><strong>Seismic-Resistant Designs:</strong> Leveraging advanced analysis techniques to ensure safety in high-risk zones.</li>
+            <li><strong>Material Optimization:</strong>  Creating cost-efficient designs without compromising durability.</li>
+            <li><strong>Load-Balancing Frameworks:</strong> Tailored solutions for wind loads, live loads, and other external forces.</li>
+            <li><strong>Specialized Designs:</strong>  Custom solutions for high-rise buildings, complex geometries, and special-use facilities.</li>
+
           </ul>
-          <p className="text-lg leading-relaxed mt-6">
-            Our expertise in structural BIM modeling allows us to offer high-quality, efficient, and detailed models that cater to all stages of the project. We work closely with all stakeholders to ensure timely delivery, cost control, and seamless execution.
-          </p>
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Our Process</h3>
+          <ul className="list-disc ml-6 text-lg leading-relaxed">
+            <li><strong>Requirement Analysis:</strong> Collaborate to understand client goals, site conditions, and regulatory needs.</li>
+            <li><strong>Conceptual Framework:</strong>   Develop structural concepts that align with architectural intent.</li>
+            <li><strong>Detailed Engineering:</strong> Create precise structural models with load simulations and material specifications.</li>
+            <li><strong>Execution Support:</strong>  Offer technical guidance during construction to ensure design accuracy.</li>
+
+          </ul>
+          <h3 className="text-2xl font-semibold mt-6 mb-4">Why Choose Us?</h3>
+          <ul className="list-disc ml-6 text-lg leading-relaxed">
+            <li>Advanced engineering software for precision modeling.</li>
+            <li>A track record of delivering high-performance structures globally.</li>
+            <li>Compliance with international standards like Eurocode, AISC, and IS codes.</li>
+
+
+          </ul>
+          <button
+            onClick={()=>{window.open("/contact-us", "_blank");}}
+            className="bg-black hover:bg-secondary hover:text-primary transition text-white mt-10 py-3 px-6 rounded-full shadow-md text-sm md:text-base font-medium"
+          >
+            Contact Us for Custom Structural Solutions
+          </button>
         </section>
       </main>
     </div>
