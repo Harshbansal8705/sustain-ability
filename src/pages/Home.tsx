@@ -26,10 +26,10 @@ function Home() {
         {/* Text Section */}
         <section className="flex flex-col items-center bg-[#e8f787] p-12 lg:p-16 rounded-3xl text-center md:text-left h-full">
           <h2 className="text-5xl lg:text-4xl font-medium text-center text-[#142e1e] leading-tight">
-          Empowering Architecture & Construction with Tailored Design Solutions
+            Empowering Architecture & Construction with Tailored Design Solutions
           </h2>
           <p className="text-lg lg:text-xl text-center text-[#142e1e] mt-6">
-          Innovative engineering and design solutions for architecture and construction firms worldwide. From intelligent structures to immersive 3D visuals, we bring your vision to life—efficiently and seamlessly.
+            Innovative engineering and design solutions for architecture and construction firms worldwide. From intelligent structures to immersive 3D visuals, we bring your vision to life—efficiently and seamlessly.
           </p>
           <button className="flex items-center gap-1 mt-8 px-8 py-3 border border-green-900 text-[#142e1e] rounded-full hover:bg-green-900 hover:text-white transition">
             Get growing <ArrowUpRightIcon />
@@ -82,19 +82,29 @@ function Home() {
 
         {/* Main Text */}
         <h2 className="text-4xl lg:text-4xl font-medium text-[#142e1e] mb-6">
-          Reimagining Urban Spaces &<br /> Designing Green Cities of the Future
+          Innovating the Skyline, <br />One Design at a Time
         </h2>
         <p className="text-[#1b3425] text-xl font-medium max-w-3xl mb-10">
 
 
-          At AssistArchitect, we’re committed to redefining what’s possible in architecture and construction. Our approach integrates cutting-edge technology with deep industry expertise to deliver designs that are not only intelligent but also impactful.
-
-
-
-          From conceptualization to execution, we partner with you to create smarter, sustainable spaces that drive success. Whether it’s crafting resilient structures, seamless systems, or immersive visuals, we’re here to bring your vision to life.
-          Why wait? Discover how AssistArchitect can transform your next project.
+          At AssistArchitect, we’re committed to
+          redefining what’s possible in architecture and
+          construction. Our approach integrates
+          cutting-edge technology with deep industry
+          expertise to deliver designs that are not only
+          intelligent but also impactful.
+          <br />
+          From conceptualization to execution, we
+          partner with you to create smarter,
+          sustainable spaces that drive success.
+          Whether it’s crafting resilient structures,
+          seamless systems, or immersive visuals,
+          we’re here to bring your vision to life.
+          <br />
+          <br />
+          <b>Why wait? Discover how AssistArchitect
+            can transform your next project.</b>
         </p>
-
         {/* Call-to-Action Button */}
         <button className="flex items-center text-xl gap-1 px-8 py-4 border border-[#1b3425] text-[#1b3425] rounded-full hover:bg-[#1b3425] hover:text-white transition">
           Schedule a Consultation <ArrowUpRightIcon />
