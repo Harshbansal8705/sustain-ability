@@ -15,11 +15,13 @@ const WhoWeAre: React.FC<Props> = () => {
                         </span>
                     </div>
                     <h2 className="text-4xl font-bold text-gray-800 mb-4">
-                        We are a strategic growth company with undeniable conviction.
+                    We are the architects of possibilities, empowering businesses with cutting-edge design and engineering solutions.
                     </h2>
 
                     <p className="text-lg text-gray-600 mb-8">
-                        Sustain.ability is a leading offshore engineering services firm. We boast world-class development teams with extensive domain expertise and exceptional project management capabilities. Our seamless, scalable, and cost-efficient offshoring model transforms complex business challenges into tangible business opportunities.
+
+
+                        AssistArchitect is a global design consultancy redefining how architecture and construction firms achieve their vision. With expertise spanning structural design, MEP systems, BIM services, and 3D visualization, we transform ideas into reality. Our commitment to innovation, precision, and efficiency allows us to tackle complex challenges and deliver exceptional outcomes, time after time.
                     </p>
                 </div>
 

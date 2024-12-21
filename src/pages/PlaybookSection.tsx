@@ -12,6 +12,8 @@ const PlaybookSection: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-semibold leading-tight mb-4">
             Always playing to win.
           </h1>
+          <div className='lg:flex gap-4'>
+          
           <img
             src="person1.jpeg"
             alt="Jeff Mason"
@@ -21,16 +23,18 @@ const PlaybookSection: React.FC = () => {
             <h2 className="font-semibold">JEFF MASON</h2>
             <p className="text-sm text-gray-500">CEO @ Sustain.ability</p>
           </div>
+          <p>“A team culture is our playbook. People ignite the vision, services deliver the value, and our products fulfill the promise. Together, with a play-to-win mentality, we transform our company into a powerful force and industry leader.”</p>
+          </div>
         </div>
 
         <div className="mt-8 md:mt-0 md:w-1/2 flex flex-col items-center md:items-start">
           <p className="text-sm sm:text-base text-textHighlight mb-6">
-            A team culture is our playbook. People ignite the vision, services deliver the value, and products fulfill the promise. Together, with a play-to-win mentality, they transform a company into a powerful force and industry leader.
+          Success isn’t a milestone; it’s a mindset. At AssistArchitect, every challenge is an opportunity to excel, innovate, and inspire. Our leadership team embodies this philosophy, driving the vision and cultivating a winning culture across every project.
           </p>
           <button
             className="px-6 py-3 bg-black text-white rounded-full flex items-center gap-2 hover:bg-secondary hover:text-primary transition-colors"
           >
-            View our leadership team ↗
+            Meet Our Leadership Team ↗
             <span className="material-icons"></span>
           </button>
         </div>

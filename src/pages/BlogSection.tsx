@@ -15,9 +15,7 @@ const BlogSection: React.FC = () => {
             The Power Blog: A sneak peek of the future.
           </h2>
           <p className="text-gray-700 text-base md:text-lg">
-            Discover insight-rich posts about the latest trends in digital marketing and consumer
-            insights for brands. The Power Blog is jam-packed with the knowledge and foresight you
-            need right now for what’s coming next.
+          Dive into cutting-edge insights and expert analyses on trends shaping architecture and construction. From groundbreaking innovations to future-forward strategies, The Power Blog equips you with the knowledge to stay ahead in a rapidly evolving industry.
           </p>
           <button className="mt-6 px-6 py-3 bg-primary text-white text-sm font-semibold rounded-full shadow hover:bg-textHighlight hover:text-primary transition">
             Browse all insights <span className="ml-2">&rarr;</span>

@@ -30,9 +30,7 @@ const HeroSection = () => {
             undeniable?
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl my-8 leading-relaxed px-2 sm:px-6">
-            For brands and enterprise companies that demand digital marketing
-            strategies with proven impact, Sustain.ability is ready to be your partner in
-            business growth.
+          Transform your vision into an architectural reality that stands the test of time. For design firms and construction companies seeking innovative solutions with tangible impact, AssistArchitect is your partner in growth, precision, and success.
           </p>
           <button
             onClick={toggleContactForm}

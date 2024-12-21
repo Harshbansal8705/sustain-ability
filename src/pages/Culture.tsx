@@ -16,48 +16,48 @@ const CultureCard = () => {
   const cards: Card[] = [
     {
       number: 1,
-      title: "Integrity, loyalty, and trust above all.",
+      title: "Integrity, loyalty, and trust above all",
       description:
-        "We play it straight and keep it real, always keeping our word to build rock-solid relationships.",
+        "We believe in building relationships on the foundation of honesty and transparency. Our word is our bond, and we ensure our partnerships are rock-solid and enduring.",
     },
     {
       number: 2,
-      title: "Maintain autonomy and freedom.",
+      title: "Fostering Creativity Through Autonomy",
       description:
-        "We thrive on independence to fuel creativity, push boundaries, and achieve personal growth.",
+        "We thrive on independence, giving our team the freedom to explore innovative ideas, push creative boundaries, and grow personally and professionally.",
     },
     {
       number: 3,
-      title: "Challenge yourself regularly.",
+      title: "Continuous Growth Through Challenges",
       description:
-        "We’re self-starters who master our craft by never settling for what’s easy.",
+        "We embrace challenges as opportunities to grow. By stepping out of our comfort zones and mastering our craft, we redefine what’s possible in every project.",
     },
     {
       number: 4,
-      title: "Don’t dwell on problems, find solutions.",
-      description: "Turn every hurdle into a springboard for new thinking.",
+      title: "Turn Challenges into Opportunities",
+      description: "We don’t dwell on problems; we solve them. Every obstacle is a chance to rethink, innovate, and pave the way forward with creative solutions.",
     },
     {
       number: 5,
-      title: "Embrace change.",
+      title: "Embrace Change, Lead the Way",
       description:
-        "Change is inevitable, so we own it as our special sauce for staying ahead of the game.",
+        "Change is inevitable, and we see it as an opportunity. By staying adaptable, we don’t just keep up—we set the pace.",
     },
     {
       number: 6,
-      title: "Always innovate.",
+      title: "Innovation is in Our DNA",
       description:
-        "Defying what’s normal is what’s normal here. Rethinking and reinventing is in our DNA.",
+        "We don’t follow trends; we create them. Rethinking and reinventing are not just practices—they’re our way of life.",
     },
     {
       number: 7,
-      title: "Go above what’s necessary.",
-      description: "We strive for excellence and always go the extra mile.",
+      title: "Strive for Excellence, Always.",
+      description: "Going the extra mile isn’t optional—it’s who we are. We deliver more than what’s expected, every single time.",
     },
     {
       number: 8,
-      title: "Have fun, don’t take yourself too seriously.",
-      description: "We believe in creating a positive and fun work environment.",
+      title: "Work Hard, Have Fun",
+      description: "Excellence doesn’t mean we forget to enjoy the journey. We foster an environment where positivity and creativity thrive.",
     },
   ];
 
