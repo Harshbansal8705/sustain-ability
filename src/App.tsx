@@ -13,7 +13,7 @@ import Navbar from './pages/Navbar';
 function App() {
   return (
     <>
-    
+    <br />
     <Router>
       <Navbar></Navbar>
       <Routes>

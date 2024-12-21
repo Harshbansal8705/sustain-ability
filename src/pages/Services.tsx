@@ -14,6 +14,7 @@ const services = [
     icon: "fas fa-project-diagram",
     route: "/services/bim",
     button: "See BIM in Action",
+    pos: "right"
   },
   {
     id: "second",
@@ -26,6 +27,7 @@ const services = [
     icon: "fas fa-cube",
     route: "/services/threeD-visualisation",
     button: "View Our Visuals",
+    pos: "left"
   },
   {
     id: "third",
@@ -39,6 +41,7 @@ const services = [
     icon: "fas fa-archway",
     route: "/services/structure-design",
     button: "Explore our Approach",
+    pos: "right"
   }
   ,
   {
@@ -52,6 +55,7 @@ const services = [
     icon: "fas fa-lightbulb",
     route: "/services/mep",
     button: "Discover Our Expertise",
+    pos: "left"
   },
 ];
 
@@ -61,11 +65,10 @@ const ServicesPage: React.FC = () => {
       <header id="header" className="py-6 px-4 md:px-12 my-16">
         <div
           id="main-title"
-          className="text-2xl md:text-4xl font-bold flex flex-col md:flex-row justify-between items-start md:items-center"
+          className="text-2xl md:text-4xl font-bold flex flex-col md:flex-row justify-between items-end md:items-center"
         >
-          <h2>
+          <h2 className="w-full text-center">
             Our Services
-
           </h2>
         </div>
       </header>
@@ -74,8 +77,8 @@ const ServicesPage: React.FC = () => {
           <div
             key={service.id}
             id={service.id}
-            className={`flex flex-col md:flex-row items-center ${index % 2 === 0
-                ? "md:flex-row rounded-l-full md:ml-6"
+            className={`flex flex-col md:flex-row md:items-center ${index % 2 === 0
+                ? "md:flex-row rounded-l-full md:ml-6 items-end"
                 : "md:flex-row-reverse rounded-r-full md:mr-6"
               } ${service.bgColor} p-6 md:p-8`}
           >
@@ -88,7 +91,7 @@ const ServicesPage: React.FC = () => {
 
             {/* Info Section */}
             <div
-              className={`info flex-1 mx-4 md:mx-8 p-4 ${index % 2 === 0 ? "md:border-l" : "md:border-r"
+              className={`info flex flex-col items-left flex-1 mx-4 md:mx-8 p-4 ${index % 2 === 0 ? "md:border-l mr-0 pr-0" : "md:border-r ml-0 pl-0"
                 } border-white ${service.textColor}`}
             >
               <div className="text-xl md:text-2xl font-bold">{service.title}</div>
@@ -99,7 +102,7 @@ const ServicesPage: React.FC = () => {
               ></p>
 
               {/* Know More Button */}
-              <div className="mt-4 flex justify-start md:justify-start">
+              <div className={`mt-4 flex justify-start md:justify-start md:self-start ${index%2 || "self-end"}`}>
                 <Link
                   to={service.route}
                   className={`inline-block px-4 py-2 mt-2 font-medium text-sm md:text-base rounded-lg ${index % 2 === 0
