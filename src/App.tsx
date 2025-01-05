@@ -34,7 +34,7 @@ function App() {
           &copy;2024 Sustain·ability. All rights reserved. <a href="#" className='underline'>Privacy Policy</a>
         </p>
         <p className="text-2xl lg:text-3xl tracking-tight my-6">
-          <span>Sustain·</span><span className='font-semibold'>ability</span>
+          <img src="/logo-color.png" alt="Logo" className='m-auto' />
         </p>
       </div>
     </>
