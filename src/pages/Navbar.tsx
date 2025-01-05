@@ -9,17 +9,18 @@ function Navbar() {
       <nav className="text-white py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8">
           {/* Logo */}
-          <div className="text-2xl font-bold tracking-wide">
-            <h1 className="text-2xl lg:text-3xl tracking-tight">
+          <div>
+            {/* <h1 className="text-2xl lg:text-3xl tracking-tight">
               <span>Sustain·</span><span className="font-semibold text-textHighlight">ability</span>
-            </h1>
+            </h1> */}
+            <img src="/logo.png" alt="Logo" className='h-8' />
           </div>
 
           {/* Menu for larger screens */}
           <div className="hidden md:flex space-x-6 text-lg font-playfair">
             <Link to="/" className="hover:text-gray-400 transition duration-300 ease-in-out">Home</Link>
             <Link to="/services" className="hover:text-gray-400 transition duration-300 ease-in-out">Services</Link>
-            <Link to="/portfolio" className="hover:text-gray-400 transition duration-300 ease-in-out">Portfolio</Link>
+            <Link to="/faqs" className="hover:text-gray-400 transition duration-300 ease-in-out">FAQs</Link>
             <Link to="/about-us" className="hover:text-gray-400 transition duration-300 ease-in-out">About Us</Link>
             <Link to="/contact-us" className="hover:text-gray-400 transition duration-300 ease-in-out">Contact Us</Link>
           </div>

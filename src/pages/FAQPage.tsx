@@ -1,7 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const PortfolioPage = () => {
+const FAQPage = () => {
   return (
     <div>
       {/* Portfolio Section */}
@@ -75,4 +72,4 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage;
+export default FAQPage;
